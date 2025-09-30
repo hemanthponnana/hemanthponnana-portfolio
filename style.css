@@ -1,0 +1,268 @@
+/*
+    Updated CSS with a new color scheme:
+    Deep Charcoal (#1f2128) with a vibrant Cyan (#00aaff) accent.
+*/
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #e0e0e0;
+    background-color: #1f2128; /* Deep Charcoal background */
+}
+
+header {
+    background-color: #16181d; /* Darker charcoal for header */
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Aligns logo to the left and links to the right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em; /* Larger font size for the name */
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #e0e0e0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00aaff; /* Vibrant Cyan for hover effect */
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card {
+    background-color: #16181d; /* Darker charcoal for card background */
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    border: 1px solid #2e3036; /* Lighter charcoal/gray border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.card h2 {
+    color: #00aaff; /* Vibrant Cyan for section titles */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('hero-background.jpg') no-repeat center center/cover;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 20px;
+}
+
+.hero-left {
+    flex: 2;
+    text-align: left;
+    max-width: 600px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-image {
+    width: 300px;
+    height: 400px;
+    border-radius: 0;
+    border: 5px solid #00aaff; /* Vibrant Cyan border */
+    object-fit: cover;
+    animation: zoomIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0 0 10px 0;
+    color: #00aaff; /* Vibrant Cyan for hero name */
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.hero-tagline {
+    font-size: 1.6em;
+    margin: 0 0 15px 0;
+    color: #e0e0e0;
+    animation: fadeInLeft 2s ease-in-out;
+}
+
+.hero-description {
+    font-size: 1em;
+    color: #b0b0b0;
+    animation: fadeInLeft 2.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Education Section Styles */
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education-cards .card {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.education-cards .card .description {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+#internships ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#internships li{
+    margin-bottom: 25px;
+    border-left: 3px solid #00aaff; /* Vibrant Cyan for list border */
+    padding-left: 15px;
+}
+
+#internships h3{
+    margin: 0;
+    color: #e0e0e0;
+}
+
+#internships p {
+    margin: 5px 0 0;
+    color: #b0b0b0;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #2a2a30; /* Darker charcoal for skill cards */
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #2e3036; /* Dark charcoal border */
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    background-color: #3e4046; /* Slightly lighter shade on hover */
+}
+
+.skill-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 0;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+#contact a {
+    color: #00aaff; /* Vibrant Cyan for contact links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #16181d; /* Darker charcoal for footer */
+    border-top: 1px solid #2e3036;
+    color: #b0b0b0;
+}
+
